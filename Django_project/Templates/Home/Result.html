@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+
+<h2>Result</h2>
+
+<div>
+    <h3>Original Image</h3>
+    {% if original_image.original_image and original_image.original_image.url %}
+        <img src="{{ original_image.original_image.url }}" alt="Original Image" style="max-width: 100%;">
+    {% else %}
+        <p>No original image available.</p>
+    {% endif %}
+</div>
+
+<div>
+    <h3>Processed Image</h3>
+    {% if processed_image.processed_image and processed_image.processed_image.url %}
+        <img src="{{ processed_image.processed_image.url }}" alt="Processed Image" style="max-width: 100%;">
+    {% else %}
+        <p>No processed image available.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
